@@ -1,0 +1,148 @@
+/* GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Kumbh Sans", "sans-serif";
+  font-size: 18px;
+}
+
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --darkBlue: hsl(229, 23%, 23%);
+  --grayishBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+/* MAIN */
+body {
+  background-color: var(--darkCyan);
+  /* height: 100vh; */
+}
+
+main.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+img#top {
+  position: absolute;
+  left: -200px;
+  top: -500px;
+}
+
+img#bottom {
+  position: absolute;
+  right: -120px;
+  bottom: -630px;
+}
+
+.card {
+  position: relative;
+  /* left: 550px; */
+  width: 280px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+img#pattern-card {
+  width: 100%;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+img#profile {
+  width: 70px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+  left: 98px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.desc > .name {
+  font-weight: 700;
+}
+
+.desc > .name > #age {
+  color: var(--darkGray);
+  font-weight: 400;
+}
+
+.desc > .city {
+  font-size: 14px;
+  color: var(--darkGray);
+  margin-top: 5px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  font-weight: 700;
+}
+
+.stats-names {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stats-names > p {
+  font-size: 10px;
+  color: var(--darkGray);
+}
+
+.stats-names > p#ml-5 {
+  margin-left: -5px;
+}
+
+.stats-names > p#ml-10 {
+  margin-left: -10px;
+}
+
+/* TABLETS */
+@media screen and (max-width: 1180px) {
+  img#top {
+    position: absolute;
+    left: -500px;
+    top: -400px;
+  }
+
+  img#bottom {
+    position: absolute;
+    right: -500px;
+    bottom: -400px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 392px) {
+  main.container {
+    overflow: auto;
+  }
+
+  img#top {
+    position: absolute;
+    left: -800px;
+    top: -400px;
+  }
+
+  img#bottom {
+    position: absolute;
+    right: -700px;
+    bottom: -550px;
+  }
+}
